@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AppService } from './app.service';
+import { MyDto } from './myDTO';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +7,22 @@ import { AppService } from './app.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private appService: AppService){}
-  users: any;
-
-  getUsers(){
-    this.appService.getUsers().subscribe((data: any)=>{
-      this.users = data;
-    });
+  public name: string = "Alvaro";
+  public age: number = 30;
+  public isMa: boolean = true;
+  public person: object = {
+    firstName: "Alvaro",
+    lastname: "Perez",
   }
+  public person1: MyDto = {
+    firstName: "Luisa",
+    lastName: "Alvarez",
+    fullName: function (): string {
+      return this.firstName + this.lastName
+    }
+  }
+  public persons: Object[] = [
+    this.person,
+    this.person1
+  ]
 }

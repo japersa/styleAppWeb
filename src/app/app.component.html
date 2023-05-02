@@ -1,8 +1,0 @@
-<div>
-  <button (click)="getUsers()">Listar usuarios</button>
-  <ul>
-    <li *ngFor="let user of users; index as i; first as isFirst">
-     {{i}} {{user.id}}  {{user.name}} <span *ngIf="isFirst">Default</span>
-    </li>
-  </ul>
-</div>
