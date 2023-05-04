@@ -1,0 +1,6 @@
+HTML: Es un lenguage de marcado, nos permite crear paginas, etiquetas, enlaces, imagenes, textos etc
+
+
+html - 5
+javascript - 6
+css - 3
